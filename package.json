@@ -10,6 +10,7 @@
     "blaze-slider": "^1.9.3",
     "bootstrap": "5.3.1",
     "photoswipe": "^5.3.8",
+    "sweetalert2": "^11.7.20",
     "swiper": "^10.1.0"
   },
   "devDependencies": {

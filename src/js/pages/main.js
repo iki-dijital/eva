@@ -2,8 +2,10 @@ import { mobileMenu } from '../lib/common';
 import BlazeSlider from 'blaze-slider';
 import Tab from "bootstrap/js/dist/tab";
 import GLightBox from "glightbox";
+import formValidate from '../lib/form';
 
 mobileMenu();
+formValidate();
 
 const servicesBlaze = document.querySelector(
   '.services .blaze-slider'
