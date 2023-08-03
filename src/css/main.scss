@@ -1,4 +1,7 @@
 @charset "UTF-8";
+main{
+    width: 100%;
+}
 
 @import 'abstracts/variables';
 @import 'abstracts/functions';
@@ -26,3 +29,4 @@
 @import 'pages/iletisim';
 @import 'pages/urunler';
 @import 'pages/urundetay';
+
