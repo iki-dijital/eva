@@ -30,6 +30,7 @@
         </div>
     </div>
 </footer>
+<script src="<?= domain ?>assets/js/form.js?v=<?= rand() ?>"></script>
 <script src="<?= domain ?>assets/js/main.js?v=<?= rand() ?>"></script>
 </body>
 
