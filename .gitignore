@@ -1,0 +1,9 @@
+.DS_Store
+.idea/
+node_modules/
+.env
+.eslintrc.cjs
+.bundlephp.cjs
+CHANGELOG.md
+postcss.config.js
+README.md
