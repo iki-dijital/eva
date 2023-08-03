@@ -1,0 +1,16 @@
+.button-primary {
+    background-color: $primary;
+    color: #fff;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    @include get_transition($prop: background-color);
+    @include get_font(700);
+  
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }

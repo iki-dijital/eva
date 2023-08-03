@@ -7,7 +7,7 @@
 
 @import 'vendors/blaze-slider';
 @import 'vendors/bootstrap';
-@import 'vendors/photoswipe';
+@import 'vendors/glightbox';
 
 @import 'base/typography';
 @import 'base/base';
@@ -15,9 +15,14 @@
 @import 'base/animations';
 @import 'base/mobile';
 
+@import "components/buttons";
+
 @import "layout/header";
 @import "layout/footer";
 @import "layout/page-banner";
 
 @import 'pages/index';
 @import 'pages/kurumsal';
+@import 'pages/iletisim';
+@import 'pages/urunler';
+@import 'pages/urundetay';

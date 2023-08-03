@@ -27,7 +27,7 @@ include "components/svg-sprite.php";
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <a href="" title="Ana sayfaya git" class="logo d-block">
+                    <a href="index.php" title="Ana sayfaya git" class="logo d-block">
                         <img src="<?= domain ?>assets/img/logo.webp" fetchpriority="high" alt="Eva uniform design logo">
                     </a>
                 </div>
@@ -35,8 +35,8 @@ include "components/svg-sprite.php";
                     <nav aria-label="Main menu" class="d-flex a-e h-100">
                         <a href="index.php" title="Ana sayfa" class="p-rel d-block">Ana Sayfa</a>
                         <a href="kurumsal.php" title="Kurumsal" class="p-rel d-block">Kurumsal</a>
-                        <a href="" title="Hizmet alanları" class="p-rel d-block">Hizmet Alanları</a>
-                        <a href="" title="İletişim" class="p-rel d-block">İletişim</a>
+                        <a href="urunler.php" title="Hizmet alanları" class="p-rel d-block">Hizmet Alanları</a>
+                        <a href="iletisim.php" title="İletişim" class="p-rel d-block">İletişim</a>
                     </nav>
                 </div>
                 <div class="col-lg-3 p-rel" id="blue_ribbon">

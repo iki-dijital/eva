@@ -1,0 +1,152 @@
+.contact_area {
+    padding: 60px 0 220px;
+    @include responsive($md){
+      padding: 30px 0;
+      h2{
+        margin-top: 0;
+        margin-bottom: 30px;
+        @include get_font(600, 22px, 1);
+      }
+    }
+  
+  }
+  
+  .contact-info {
+    flex-wrap: wrap;
+    gap: 10px 15px;
+    padding-left: 0;
+    margin: 0 0 72px;
+  
+    li {
+      width: 100%;
+      gap: 8px;
+  
+      p {
+        margin: 0;
+        line-height: 1;
+        font-size: 16px;
+      }
+  
+      &:not(:first-child) {
+        width: fit-content;
+      }
+
+      &:first-of-type{
+        svg{
+            margin-left: -3px;
+        }
+      }
+  
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $primary;
+      }
+    }
+    @include responsive($md){
+      margin-bottom: 40px;
+      li{
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  
+  }
+  
+  .directions {
+    background-color: $primary;
+    color: #fff;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    @include get_transition($prop: background-color);
+    @include get_font(700);
+  
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+  
+  .map-wrapper {
+    aspect-ratio: 1000/375;
+    margin-bottom: 64px;
+  
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+    @include responsive($md){
+      aspect-ratio: 5/3;
+      margin-bottom: 30px;
+    }
+  
+  }
+  
+  form {
+    gap: 30px;
+  
+    span {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      color: #000;
+      @include get_font(700, 23px);
+    }
+  
+    label {
+      display: block;
+      width: 50%;
+      @include get_font(700, 16px);
+  
+      input,textarea {
+        background-color: #e9ecf1;
+        outline: 1px solid #e9ecf1;
+        border: none;
+        padding: 20px 25px;
+        color: #000;
+        border-radius: 10px;
+        width: 100%;
+        @include get_font($font_size: 17px);
+        @include get_transition($prop: outline);
+        &::-webkit-input-placeholder{
+            color: #000;
+        }
+  
+        &:focus {
+          outline: 1px solid $primary;
+        }
+      }
+      textarea{
+        min-height: 170px;
+      }
+      &:last-of-type{
+        width: 100%;
+      }
+    }
+    .button-primary{
+      margin-top: 10px;
+      display: inline-flex;
+      width: fit-content;
+      padding: 15px 50px;
+      box-shadow: 0 0 16px 0 rgba(208, 214, 228, 1);
+    }
+    @include responsive($md){
+      gap: 15px;
+      label{
+        width: 100%;
+        input{
+          font-size: 14px;
+          padding: 15px;
+        }
+        textarea{
+          padding: 15px;
+          min-height: 100px;
+        }
+      }
+    }
+  
+  }

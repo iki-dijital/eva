@@ -52,7 +52,7 @@ include "header.php";
                     <div class="blaze-track-container">
                         <div class="blaze-track">
                             <?php for ($i = 1; $i <= 10; $i++): ?>
-                                <a href="" title="Otel üniformaları" class="blaze-item">
+                                <a href="urundetay.php" title="Otel üniformaları" class="blaze-item">
                                     <img src="<?= domain ?>assets/img/service-<?= rand(1, 3) ?>.webp"
                                         alt="Üniformalı insanlar" loading="lazy">
                                     <span class="d-block">OTEL ÜNİFORMALARI</span>

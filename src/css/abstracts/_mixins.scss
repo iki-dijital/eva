@@ -66,6 +66,14 @@ $uwqhd: 3440;
   }
 }
 
+@mixin no_hover{
+  @media (hover: hover){
+    &:hover{
+      @content;
+    }
+  }
+}
+
 @mixin get_transition($dur: 0.3s, $prop: all) {
   -webkit-transition: $dur ease $prop;
   -o-transition: $dur ease $prop;

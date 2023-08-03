@@ -1,0 +1,44 @@
+@use "sass:math";
+#prods-tab {
+  gap: 30px;
+  padding-top: 65px;;
+  .nav-item {
+    .nav-link {
+      padding: 0;
+      @include get_font(700, 17px, 1.2);
+      &::after {
+        content: '';
+        position: absolute;
+        right: -15px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: $primary;
+      }
+    }
+    &:last-of-type {
+      .nav-link {
+        &::after {
+          content: unset;
+        }
+      }
+    }
+  }
+}
+
+#prods-content{
+    padding: 80px 0 min(32vh, 350px);
+    .tap-pane{
+        padding: 0 #{math.div($grid-gutter-width,2)}
+    }
+    .row{
+        row-gap: 30px;
+    }
+    a{
+        aspect-ratio: 1;
+    }
+    img{
+        object-fit: cover;
+        object-position: center;
+    }
+}

@@ -1,0 +1,68 @@
+@use 'sass:math';
+.prods {
+  $number_of_items: 5;
+  $gap: 10px;
+
+  padding: min(17vh, 190px) 0 min(55vh, 540px);
+  text-align: center;
+  h2 {
+    margin-bottom: 15px;
+    @include get_font(800, 44px);
+  }
+  .desc {
+    @include get_font(800, 16px);
+  }
+  &_wrapper {
+    padding-top: 75px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .prod {
+    width: calc(
+      20% - #{math.div($gap, $number_of_items) *
+        ($number_of_items - 1)}
+    );
+    aspect-ratio: 229/572;
+    overflow: hidden;
+    @include no_hover {
+      .overlay {
+        top: 50%;
+        bottom: 23%;
+        padding-top: 25%;
+        background-color: #000;
+      }
+      button {
+        opacity: 1;
+      }
+    }
+  }
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+  .overlay {
+    padding: 15% 30px;
+    background-color: rgba(black, 0.82);
+    @include pos_abs();
+    @include get_transition();
+    span {
+      color: #fff;
+      text-align: center;
+      @include get_font($font_weight: 700, $line_height: 1.2);
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      color: #fff;
+      background-color: $primary;
+      border: none;
+      padding: 16px 7px;
+      opacity: 0;
+      transform: translateY(50%);
+      @include get_font(500, 17px, 1);
+      @include get_transition($prop: opacity);
+    }
+  }
+}

@@ -93,7 +93,9 @@
       text-align: center;
       @include get_font(800, 18px, 1.1);
       @include get_transition();
-      &:hover {
+    }
+    &:hover {
+      span {
         background-color: $golden;
         color: $primary;
       }
@@ -135,7 +137,7 @@
   color: $primary;
   padding: 160px 0;
 
-  .text{
+  .text {
     top: -50px;
     left: 50%;
     transform: translateX(-50%);

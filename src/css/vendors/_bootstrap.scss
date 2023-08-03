@@ -11,6 +11,11 @@ $container-max-widths: (
   xxl: 1170px,
 );
 
+$nav-tabs-border-width: 0px;
+$nav-tabs-border-radius: 0px;
+$nav-tabs-link-active-color: $primary;
+$nav-link-color: $golden;
+
 // scss-docs-start import-stack
 // Configuration
 @import '../../../node_modules/bootstrap/scss/functions';
@@ -33,7 +38,7 @@ $container-max-widths: (
 // @import '../../../node_modules/bootstrap/scss/transitions';
 // @import '../../../node_modules/bootstrap/scss/dropdown';
 // @import '../../../node_modules/bootstrap/scss/button-group';
-// @import '../../../node_modules/bootstrap/scss/nav';
+@import '../../../node_modules/bootstrap/scss/nav';
 // @import '../../../node_modules/bootstrap/scss/navbar';
 // @import '../../../node_modules/bootstrap/scss/card';
 // @import '../../../node_modules/bootstrap/scss/accordion';
