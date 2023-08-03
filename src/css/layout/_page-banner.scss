@@ -1,0 +1,29 @@
+.page_banner{
+    aspect-ratio: 1920/320;
+    position: relative;
+    img{
+        z-index: -1;
+        position: absolute;
+        @include pos_abs();
+    }
+
+    &_title{
+        padding: 20px 70px;
+        background-color: #000;
+        color: #fff;
+        position: relative;
+        display: inline-flex;
+        @include get_font(500, 20px, 1);
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            height: 2px;
+            width: 25%;
+            background-color: #fff;
+            transform: translate(50%, -50%);
+        }
+    }
+}
+

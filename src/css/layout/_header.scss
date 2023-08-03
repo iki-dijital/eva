@@ -1,0 +1,121 @@
+header {
+  overflow-x: hidden;
+}
+
+:root {
+  @each $key, $val in $container-max-widths {
+    @include media-breakpoint-up($key) {
+      --container-margin: calc((100vw - #{$val}) / 2);
+    }
+  }
+}
+
+.header_lg {
+  padding: 55px 0 35px;
+  .logo {
+    img {
+      width: 100%;
+    }
+  }
+  nav {
+    padding-bottom: 30px;
+    a {
+      color: #000;
+      padding: 0 15px;
+      @include get_font(400, 15px, 1);
+      @include get_transition($prop: color);
+      &:last-child {
+        padding-right: 0;
+        &:after {
+          content: unset;
+        }
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 1px;
+        background-color: #000;
+      }
+      &:hover {
+        color: $golden;
+      }
+    }
+  }
+  .lang {
+    padding: 7px 0;
+    a {
+      padding: 3px 13px;
+      color: #fff;
+      @include get_font(600, 14px, 1);
+      @include get_transition($prop: color);
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: 2px;
+        width: 2px;
+        background-color: #fff;
+      }
+      &:last-child:after {
+        content: unset;
+      }
+      &:hover {
+        color: $golden;
+      }
+    }
+  }
+  .social {
+    padding: 13px 0 30px;
+    gap: 16px;
+    span {
+      color: #fff;
+      @include get_font(400, 13px, 1);
+    }
+    & > div {
+      gap: 16px;
+    }
+    a {
+      width: 24px;
+      height: 24px;
+      svg {
+        fill: #fff;
+        @include get_transition($prop: fill);
+      }
+      &:hover {
+        svg {
+          fill: $golden;
+        }
+      }
+    }
+  }
+  &::after {
+    content: '';
+    background-color: $primary;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: var(--container-margin);
+    z-index: -1;
+  }
+}
+
+#blue_ribbon {
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: $primary;
+    top: -55px;
+    left: 0;
+    bottom: -35px;
+    right: 0;
+    z-index: -1;
+  }
+}

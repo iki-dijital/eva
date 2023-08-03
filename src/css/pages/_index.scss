@@ -1,0 +1,188 @@
+.banner {
+  .cm_container {
+    margin: 0 auto;
+    aspect-ratio: 1525/858;
+    @each $key, $val in $container-max-widths {
+      @include media-breakpoint-up($key) {
+        $get_width: $val * 1.3;
+        max-width: min(#{$get_width}, 90vw);
+      }
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+  }
+  .content {
+    padding-top: 15%;
+    color: #fff;
+  }
+  .container {
+    gap: 60px;
+  }
+  span {
+    @include get_font(400, 49px, 0.9);
+  }
+  strong {
+    font-weight: 800;
+  }
+  p {
+    width: 50%;
+    @include get_font(500, 16px, 1.25);
+  }
+}
+
+.about {
+  padding: 150px 0;
+  .content {
+    color: $primary;
+    padding-top: 50px;
+  }
+  h2 {
+    margin-bottom: 10px;
+    @include get_font(600, 45px, 1.17);
+  }
+  span {
+    margin-bottom: 55px;
+    @include get_font(800, 15px, 1);
+  }
+  p {
+    @include get_font(300, 16px, 1.625);
+  }
+  img {
+    width: 100%;
+  }
+  .text {
+    top: 10%;
+    left: -15%;
+    color: #000;
+    opacity: 0.04;
+    z-index: -1;
+    @include get_font(700, 172px, 1);
+  }
+}
+
+.services {
+  padding-top: 80px;
+  & > img {
+    top: 0;
+    z-index: -1;
+  }
+  .title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 80px;
+    @include get_font(800, 40px, 1);
+  }
+  .blaze-item {
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center;
+    }
+    span {
+      width: 100%;
+      padding: 45px 15px;
+      background-color: $primary;
+      color: $golden;
+      text-align: center;
+      @include get_font(800, 18px, 1.1);
+      @include get_transition();
+      &:hover {
+        background-color: $golden;
+        color: $primary;
+      }
+    }
+  }
+  .blaze-track-container {
+    margin-bottom: 55px;
+  }
+  .navigation {
+    gap: 70px;
+    button {
+      padding: 0;
+      gap: 15px;
+      background-color: unset;
+      border: unset;
+      &.blaze-prev {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+      &:hover {
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+    svg {
+      fill: $golden;
+      width: 20px;
+      @include get_transition($prop: fill);
+    }
+    span {
+      @include get_font(400, 18px, 1);
+    }
+  }
+}
+
+.how {
+  color: $primary;
+  padding: 160px 0;
+
+  .text{
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f7f7f7;
+    white-space: nowrap;
+    z-index: -1;
+    @include get_font(700, 150px, 1);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 80px;
+    @include get_font(800, 40px, 1);
+  }
+  h3 {
+    margin-bottom: 30px;
+    padding-right: 115px;
+    text-align: right;
+    @include get_font(500, 32px, 1.5);
+
+    strong {
+      font-weight: 800;
+    }
+  }
+  p {
+    text-align: right;
+    @include get_font(300, 24px, 1.7);
+  }
+  button {
+    background-color: unset;
+    border: none;
+    padding: 0;
+    &.blaze-prev {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  svg {
+    width: 40px;
+    fill: $primary;
+    background-color: #fff;
+    border-radius: 3px;
+    @include get_transition($prop: fill);
+  }
+  .navigation {
+    top: 0;
+    right: 0;
+    gap: 10px;
+  }
+}

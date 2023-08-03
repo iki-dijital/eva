@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+@import 'vendors/blaze-slider';
+@import 'vendors/bootstrap';
+@import 'vendors/photoswipe';
+
+@import 'base/typography';
+@import 'base/base';
+@import 'base/utilities';
+@import 'base/animations';
+@import 'base/mobile';
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/page-banner";
+
+@import 'pages/index';
+@import 'pages/kurumsal';

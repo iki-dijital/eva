@@ -1,0 +1,70 @@
+footer {
+  background-color: #000;
+  padding: 90px 0 60px;
+  color: #fff;
+  .social {
+    gap: 15px;
+    margin-bottom: 50px;
+    span {
+      @include get_font(400, 22px, 1);
+    }
+    & > div {
+      gap: 25px;
+    }
+    a {
+      &:hover {
+        svg {
+          fill: $golden;
+        }
+      }
+    }
+    svg {
+      width: 45px;
+      fill: #fff;
+      @include get_transition($prop: fill);
+    }
+  }
+  .newsletter {
+    margin-bottom: 45px;
+    text-align: center;
+    span {
+      margin-bottom: 35px;
+      @include get_font(400, 14px, 1.1);
+    }
+    input {
+      flex: 1;
+      padding: 20px 30px;
+      color: #000;
+      @include get_font(400, 15px, 1);
+    }
+    button {
+      flex: 0 0 auto;
+      padding: 15px 55px;
+      background-color: #4a4a4a;
+      color: #fff;
+      border: none;
+      @include get_font(400, 22px, 1);
+      @include get_transition($prop: background-color);
+      &:hover {
+        background-color: $golden;
+      }
+    }
+  }
+  
+  .links {
+    gap: 35px;
+    margin-bottom: 75px;
+    a{
+        color: #fff;
+        @include get_font(400, 12px, 1);
+        @include get_transition($prop: color);
+        &:hover{
+            color: $golden;
+        }
+    }
+  }
+  .copy{
+    text-align: center;
+    @include get_font(400, 13px, 1);
+  }
+}
